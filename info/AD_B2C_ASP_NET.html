@@ -15,7 +15,7 @@ https://docs.microsoft.com/ko-kr/azure/active-directory-b2c/tutorial-create-tena
 &nbsp; &nbsp; &nbsp; &nbsp; - ASP.NET<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 이름 : My Sample Web App<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 키값 생성 : kczv3,M9rFw1yqmJ|lVHNV&gt;v<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 응용프로그램 ID : 9f28a11b-1093-4218-8a80-f36653f40e16 &lt;----- 잘 기억<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 응용프로그램 ID : 1234-5678 &lt;----- 잘 기억<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Reply URL : http://localhost:44316<br />
 <br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 정책 만들기<br />
@@ -56,7 +56,7 @@ https://docs.microsoft.com/ko-kr/azure/active-directory-b2c/tutorial-create-tena
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ...<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;add key="ida:Tenant" value="AzureADTest0709Tenant.onmicrosoft.com" /&gt;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;add key="ida:ClientId" value="9f28a11b-1093-4218-8a80-f36653f40e16" /&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;add key="ida:ClientId" value="1234-5678" /&gt;<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;add key="ida:ClientSecret" value="kczv3,M9rFw1yqmJ|lVHNV&gt;v" /&gt;<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;add key="ida:SignUpSignInPolicyId" value="B2C_1_SiUpIn_ASP" /&gt;<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;add key="ida:EditProfilePolicyId" value="B2C_1_SiPe_ASP" /&gt;<br />
@@ -69,7 +69,7 @@ https://docs.microsoft.com/ko-kr/azure/active-directory-b2c/tutorial-create-tena
 &nbsp; &nbsp; &nbsp; &nbsp; - 웹 API 등록<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 테넌트에 새 응용 프로그램 추가<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 이름 : My Sample Web API &lt;----- 잘 기억<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 응용프로그램 ID : 4b071404-ce90-42d4-a8c2-eb35659da31d &lt;----- 잘 기억<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 응용프로그램 ID : abcd-efgh &lt;----- 잘 기억<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Reply URL : http://localhost:44332 &lt;- 이 정보는 어디서 쓰이는지 모르겠음.<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; App ID URI : AzureADTest0709Tenant.onmicrosoft.com/ + myAPISample &lt;------ 잘 기억<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />
@@ -116,7 +116,7 @@ https://docs.microsoft.com/ko-kr/azure/active-directory-b2c/tutorial-create-tena
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 이것을 매뉴얼대로 수정하면<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;add key="ida:Tenant" value="AzureADTest0709Tenant.onmicrosoft.com" /&gt;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;add key="ida:ClientId" value="4b071404-ce90-42d4-a8c2-eb35659da31d" /&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;add key="ida:ClientId" value="abcd-efgh" /&gt;<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;add key="ida:SignUpSignInPolicyId" value="B2C_1_SiUpIn_ASP" /&gt;<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;add key="api:ReadScope" value="Hello.Read" /&gt;<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;add key="api:WriteScope" value="Hello.Write" /&gt;<br />

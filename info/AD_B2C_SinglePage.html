@@ -17,7 +17,7 @@ https://docs.microsoft.com/ko-kr/azure/active-directory-b2c/tutorial-create-tena
 &nbsp; &nbsp; &nbsp; &nbsp; - 단일 페이지<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 단일 페이지 앱 등록시<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 이름 : My Sample single page app<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 응용프로그램 ID : cc2df185-e099-48d0-b6e1-58e89f5925dd &lt;----- 잘 기억<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 응용프로그램 ID : 1234-0987 &lt;----- 잘 기억<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Reply URL : http://localhost:6420 &lt;----- 이걸 노드로 웹서버를 띄움. 역시 포트 잘 기억<br />
 <br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 정책 만들기<br />
@@ -51,7 +51,7 @@ https://docs.microsoft.com/ko-kr/azure/active-directory-b2c/tutorial-create-tena
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 이것을 매뉴얼대로 수정하면 아래처럼 변경<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; var applicationConfig = {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; clientID: 'cc2df185-e099-48d0-b6e1-58e89f5925dd',<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; clientID: '1234-0987',<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; authority: "https://login.microsoftonline.com/tfp/AzureADTest0709Tenant.onmicrosoft.com/B2C_1_SiUpIn_SingleApp",<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; b2cScopes: ... , &lt;- 차후 변경<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; webApi: ... , &lt;- 차후 변경<br />
@@ -68,7 +68,7 @@ https://docs.microsoft.com/ko-kr/azure/active-directory-b2c/tutorial-create-tena
 &nbsp; &nbsp; &nbsp; &nbsp; - 웹 API 등록<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 테넌트에 새 응용 프로그램 추가<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 이름 : Hello Core API &lt;----- 잘 기억<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 응용프로그램 ID : d2cf80ad-cf69-446d-910d-b8ea6a30ed4d &lt;----- 잘 기억<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 응용프로그램 ID : abcd-zxcv &lt;----- 잘 기억<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Reply URL : http://localhost:44332 &lt;- 이 정보는 어디서 쓰이는지 모르겠음.<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; App ID URI : AzureADTest0709Tenant.onmicrosoft.com/ + HelloCoreAPI &lt;------ 잘 기억<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />
@@ -102,7 +102,7 @@ https://docs.microsoft.com/ko-kr/azure/active-directory-b2c/tutorial-create-tena
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "AzureAdB2C":<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "Tenant": "AzureADTest0709Tenant.onmicrosoft.com",<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "ClientId": "d2cf80ad-cf69-446d-910d-b8ea6a30ed4d",<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "ClientId": "abcd-zxcv",<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "Policy": "B2C_1_SiUpIn_SingleApp",<br />
 <br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "ScopeRead": "demo.read",<br />
@@ -126,7 +126,7 @@ https://docs.microsoft.com/ko-kr/azure/active-directory-b2c/tutorial-create-tena
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 노드로 띄우는 웹서버를 다시 수정하면<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; var applicationConfig = {<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; clientID: 'cc2df185-e099-48d0-b6e1-58e89f5925dd',<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; clientID: '1234-0987',<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; authority: "https://login.microsoftonline.com/tfp/AzureADTest0709Tenant.onmicrosoft.com/B2C_1_SiUpIn_SingleApp",<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; b2cScopes: ["https://AzureADTest0709Tenant.onmicrosoft.com/HelloCoreAPI/demo.read"],<br />
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; webApi: 'http://localhost:63619/api/Values', &nbsp;&lt;----- 이렇게 세팅하면 VS에서 바로 디버깅할때 사용<br />
